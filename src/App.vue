@@ -9,5 +9,5 @@
   <Navbar />
   <Hero title="Test Title" subtitle="Test Subtitle"/>
   <HomeCards />
-  <JobListings />
+  <JobListings :limit="2" :show-button="true"/>
 </template>
