@@ -1,21 +1,21 @@
 <script>
-export default{
+export default {
   data() {
     return {
-      name: 'Greg Flores',
-      status: 'active',
-      tasks: ['1','2','3','4'],
-      link: '#'
-    }
+      name: "Greg Flores",
+      status: "active",
+      tasks: ["1", "2", "3", "4"],
+      link: "#",
+    };
   },
   methods: {
     toggleStatus() {
-      if(this.status === 'active') this.status = 'pending'
-      else if(this.status === 'pending') this.status = 'inactive'
-      else if(this.status === 'inactive') this.status = 'active'
-    }
-  }
-}
+      if (this.status === "active") this.status = "pending";
+      else if (this.status === "pending") this.status = "inactive";
+      else if (this.status === "inactive") this.status = "active";
+    },
+  },
+};
 </script>
 <template>
   <h1>{{ name }}</h1>
@@ -25,7 +25,11 @@ export default{
 
   <h3>Tasks</h3>
   <ul>
-    <li v-for="(task, index) in tasks" :key="index">{{ task }}</li>
+    <li
+      v-for="(task, index) in tasks"
+      :key="index">
+      {{ task }}
+    </li>
   </ul>
   <a :href="link">Click me</a>
 
